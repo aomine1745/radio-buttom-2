@@ -1,0 +1,46 @@
+body{
+	font-family: sans-serif;
+	background-color: #f5f5f5;
+}
+h1{
+	color: #dc2d5e;
+}
+.radioContainer{
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	font-size: 22px;
+	user-select: none;
+	padding-left: 45px;
+}
+.radioContainer input{
+	display: none;
+}
+.radioContainer .circle{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-color: #eee;
+	position: absolute;
+	left: 10px;
+	top: 0;
+	border-radius: 50%;
+	transition: all .5s ease;
+}
+.radioContainer:hover .circle{
+	background-color: #ccc;
+}
+.radioContainer input:checked + .circle{
+	background-color: #2196fc;
+}
+.radioContainer input:checked + .circle:after{
+	content: '';
+	height: 10px;
+	width: 10px;
+	background-color: #fff;
+	position: absolute;
+	border-radius: 50%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
